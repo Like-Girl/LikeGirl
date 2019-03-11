@@ -8,24 +8,25 @@
         <artifactId>LikeGirl</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>LikeGirl-Web</artifactId>
-
-    <name>LikeGirl-Web</name>
+    <artifactId>LikeGirl-Generator</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>LikeGirl-Generator</name>
     <url>http://maven.apache.org</url>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <velocity.version>1.7</velocity.version>
     </properties>
     <dependencies>
+        <!--velocity代码生成使用模板 -->
         <dependency>
-            <groupId>cn.likegirl</groupId>
-            <artifactId>LikeGirl-Base</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
         </dependency>
         <dependency>
-            <groupId>cn.likegirl</groupId>
-            <artifactId>LikeGirl-Biz</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.10</version>
         </dependency>
         <dependency>
             <groupId>cn.likegirl</groupId>
@@ -33,19 +34,18 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>cn.likegirl</groupId>
-            <artifactId>LikeGirl-Task</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.23</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
+            <!-- 其实这里应该是provided 或者 test  -->
+            <!--<scope>provided</scope>-->
+            <scope>compile</scope>
         </dependency>
     </dependencies>
+
 </project>
