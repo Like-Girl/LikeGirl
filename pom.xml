@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -12,7 +13,13 @@
 	<url>http://maven.apache.org</url>
 
 	<modules>
-
+		<module>LikeGirl-Common</module>
+		<module>LikeGirl-Base</module>
+		<module>LikeGirl-Task</module>
+		<module>LikeGirl-Biz</module>
+		<module>LikeGirl-Web</module>
+		<module>LikeGirl-Provider</module>
+		<module>LikeGirl-Api</module>
 	</modules>
 
 	<parent>
@@ -38,18 +45,44 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<lombok.version>1.18.0</lombok.version>
-		<commons-fileupload.version>1.2.2</commons-fileupload.version>
-		<commons-lang3.version>3.3.1</commons-lang3.version>
-		<commons-io.version>2.4</commons-io.version>
+		<commons-net.version>3.6</commons-net.version>
+		<commons-fileupload.version>1.3.3</commons-fileupload.version>
+		<commons-lang3.version>3.7</commons-lang3.version>
+		<commons-io.version>2.6</commons-io.version>
 		<httpclient.version>4.5.5</httpclient.version>
 		<commons-collections.version>3.2.2</commons-collections.version>
 		<common.codec.version>1.10</common.codec.version>
 		<commons-digester.version>2.1</commons-digester.version>
 		<commons-beanutils.version>1.9.3</commons-beanutils.version>
-		<org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
-		<fastjson.version>1.1.26</fastjson.version>
+		<commons-pool2.version>2.5.0</commons-pool2.version>
+		<jackson.version>2.8.10</jackson.version>
+		<fastjson.version>1.2.55</fastjson.version>
 		<fasterxml.uuid.version>3.1.4</fasterxml.uuid.version>
 		<guava.version>26.0-jre</guava.version>
+		
+		<!-- -->
+		<netty-version>4.1.25.Final</netty-version>
+		<lettuce.version>5.0.4.RELEASE</lettuce.version>
+		<okhttp.version>3.10.0</okhttp.version>
+		<mail.version>1.6.1</mail.version>
+		<redisson.version>3.7.1</redisson.version>
+		<poi.version>3.17</poi.version>
+		<jxl.version>2.6.12</jxl.version>
+		<xfire.version>1.2.6</xfire.version>
+		<jsch.version>0.1.54</jsch.version>
+		<zxing.version>3.3.2</zxing.version>
+		<jackson.version>2.9.5</jackson.version>
+		<zookeeper.version>3.4.12</zookeeper.version>
+		<shiro.version>1.4.0</shiro.version>
+		<quartz.version>2.3.0</quartz.version>
+		<aspectj.version>1.9.1</aspectj.version>
+		<pinyin4j.version>2.5.1</pinyin4j.version>
+		<activemq.version>5.13.3</activemq.version>
+		<jsqlparser.version>0.9.5</jsqlparser.version>
+		<springfox.version>2.6.1</springfox.version>
+		<swagger.version>1.5.18</swagger.version>
+		<thumbnailator.version>0.4.8</thumbnailator.version>
+		<javassist.version>3.22.0-GA</javassist.version>
 	</properties>
 
 	<dependencies>
@@ -130,72 +163,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
+
 		
-		<!-- commons 系列 -->
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>${commons-fileupload.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>${commons-lang3.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>${commons-io.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-collections</groupId>
-			<artifactId>commons-collections</artifactId>
-			<version>${commons-collections.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>${common.codec.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-digester</groupId>
-			<artifactId>commons-digester</artifactId>
-			<version>${commons-digester.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-beanutils</groupId>
-			<artifactId>commons-beanutils</artifactId>
-			<version>${commons-beanutils.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>${httpclient.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-pool2</artifactId>
-		</dependency>
-		<!--对json格式的支持 -->
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${org.codehaus.jackson.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.uuid</groupId>
-			<artifactId>java-uuid-generator</artifactId>
-			<version>${fasterxml.uuid.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>${guava.version}</version>
-		</dependency>
 	</dependencies>
 
 	<!-- profile 配置切换: mvn clean install -P dev/prod/local -->
