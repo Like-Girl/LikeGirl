@@ -3,8 +3,7 @@ package cn.likegirl.common.core;
 /**
  * 常量表
  *
- * @author ShenHuaJie
- * @version $Id: Constants.java, v 0.1 2014-2-28 上午11:18:28 ShenHuaJie Exp $
+ * @author LikeGirl
  */
 public interface Constants {
     /**
@@ -27,11 +26,11 @@ public interface Constants {
     /** 登录地址 */
     static final String LOGIN_URL = "/login.html";
     /** 缓存命名空间 */
-    static final String CACHE_NAMESPACE = "iBase4J:";
+    static final String CACHE_NAMESPACE = "LikeGirl:";
     /** 缓存命名空间 */
-    static final String SYSTEM_CACHE_NAMESPACE = "S:iBase4J:";
+    static final String SYSTEM_CACHE_NAMESPACE = "S:LikeGirl:";
     /** 缓存命名空间 */
-    static final String CACHE_NAMESPACE_LOCK = "L:iBase4J:";
+    static final String CACHE_NAMESPACE_LOCK = "L:LikeGirl:";
     /** 上次请求地址 */
     static final String PREREQUEST = CACHE_NAMESPACE + "PREREQUEST";
     /** 上次请求时间 */
@@ -47,13 +46,13 @@ public interface Constants {
     /** SESSION */
     static final String REDIS_SHIRO_SESSION = SYSTEM_CACHE_NAMESPACE + "SHIRO-SESSION:";
     /** CACHE */
-    static final String MYBATIS_CACHE = "D:iBase4J:MYBATIS:";
+    static final String MYBATIS_CACHE = "D:LikeGirl:MYBATIS:";
     /** 默认数据库密码加密key */
     static final String DB_KEY = "90139119";
     /** 临时目录 */
     static final String TEMP_DIR = "/temp/";
     /** 请求报文体 */
-    static final String REQUEST_BODY = "iBase4J.requestBody";
+    static final String REQUEST_BODY = "LikeGirl.requestBody";
 
     /** 日志表状态 */
     interface JOBSTATE {

@@ -2,7 +2,6 @@ package cn.likegirl.common.core.support.validate;
 
 import java.lang.reflect.Field;
 
-import cn.likegirl.common.core.exception.ValidateException;
 import cn.likegirl.common.core.util.DataUtil;
 import cn.likegirl.common.core.util.IDCardUtil;
 

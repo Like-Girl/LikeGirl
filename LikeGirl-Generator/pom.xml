@@ -17,6 +17,11 @@
         <velocity.version>1.7</velocity.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>cn.likegirl</groupId>
+            <artifactId>LikeGirl-Common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!--velocity代码生成使用模板 -->
         <dependency>
             <groupId>org.apache.velocity</groupId>
@@ -27,11 +32,6 @@
             <groupId>commons-configuration</groupId>
             <artifactId>commons-configuration</artifactId>
             <version>1.10</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.likegirl</groupId>
-            <artifactId>LikeGirl-Common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.freemarker</groupId>
